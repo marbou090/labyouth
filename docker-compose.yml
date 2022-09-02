@@ -1,0 +1,12 @@
+version: '3'
+services:
+  pyknp:
+    build: .
+    working_dir: /root/
+    container_name: labyouth
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./workspace:/root/workspace
+    ports:
+      - "10000:8080"
